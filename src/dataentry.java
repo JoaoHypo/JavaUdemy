@@ -4,19 +4,22 @@ public class dataentry {
 
         Scanner sc = new Scanner(System.in);
 
-        String x;
-        int y;
-        double z;
+        int v;
+        String x,y,z;
 
-        x = sc.next();
-        y = sc.nextInt();
-        z = sc.nextDouble();
+
+        v = sc.nextInt();
+        sc.nextLine();//nextline para resolver o dado pendente que fica em branco
+        x = sc.nextLine();
+        y = sc.nextLine();
+        z = sc.nextLine();
+
 
         System.out.println("Você digitou: ");
+        System.out.println(v);
         System.out.println(x);
         System.out.println(y);
         System.out.println(z);
-
 
         sc.close();
 
