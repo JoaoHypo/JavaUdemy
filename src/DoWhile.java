@@ -19,7 +19,7 @@ public class DoWhile {
             sn = sc.nextLine();
 
         }while (sn.equals("s"));
-
+        System.out.print("Finalizando...");
         sc.close();
     }
 }
