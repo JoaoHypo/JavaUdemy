@@ -8,9 +8,9 @@ public class Forzada {
         int n1,n,sum;
         sum = 0;
         n1 = sc.nextInt();
-
-        for (int cont=0;cont<n1;cont++) { //comand;condition;action (cont++) == (cont += 1)
-
+        int cont=0; //we can declare things out of the for, the only obligated is the condition
+        for (;cont<n1;) { //comand;condition;action (cont++) == (cont += 1)
+            cont++;
             n = sc.nextInt();
             sum += n;
 
