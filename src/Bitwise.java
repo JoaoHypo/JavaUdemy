@@ -10,7 +10,7 @@ public class Bitwise {
         // 32 in bin its 0010 0000, so if we do bitwise & with any number,
         // we can evaluate if this number in bin has it's six'th value
 
-        if ((n1 & 32) == 32){
+        if ((n1 & 0b00100000) == 32){
             System.out.printf("%d 6th bit is True",n1);
         }
         else{
