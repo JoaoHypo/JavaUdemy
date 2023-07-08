@@ -10,7 +10,6 @@ public class Areas {
         A = sc.nextDouble();
         B = sc.nextDouble();
         C = sc.nextDouble();
-
         t = A * C /2;
         c = Math.PI * Math.pow(C,2);
         tp = ((A + B)/2)*C;
