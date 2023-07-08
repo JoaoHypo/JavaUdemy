@@ -20,6 +20,6 @@ public class Areas {
         System.out.printf("CIRCULO: %.3f%n",c);
         System.out.printf("TRAPEZIO: %.3f%n",tp);
         System.out.printf("QUADRADO: %.3f%n",q);
-        System.out.printf("RETANGULO: %.3f%n",r);
+        System.out.printf("RETANGULO: %.3f",r);
     }
 }
