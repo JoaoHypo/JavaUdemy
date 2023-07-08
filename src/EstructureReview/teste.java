@@ -1,3 +1,5 @@
+package EstructureReview;
+
 public class teste {
     public static void main(String[] args) {
 

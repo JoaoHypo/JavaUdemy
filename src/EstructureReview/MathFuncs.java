@@ -1,3 +1,5 @@
+package EstructureReview;
+
 public class MathFuncs {
     public static void main(String[] args) {
 

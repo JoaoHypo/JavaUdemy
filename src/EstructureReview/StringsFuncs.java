@@ -1,3 +1,5 @@
+package EstructureReview;
+
 public class StringsFuncs {
     public static void main(String[] args){
         String original = "abcde FGHIJ ABC abc DEFG ";

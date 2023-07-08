@@ -1,3 +1,5 @@
+package EstructureReview;
+
 import java.util.Scanner; //importando o imputador
 
 public class Bhaskara {

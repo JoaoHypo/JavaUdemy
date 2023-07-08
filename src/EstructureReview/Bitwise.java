@@ -1,3 +1,5 @@
+package EstructureReview;
+
 import java.util.Scanner;
 
 public class Bitwise {
