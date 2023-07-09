@@ -24,6 +24,8 @@ public class ProblemPreOOB {
         System.out.printf("Triangle y area: %.4f%n",ya);
 
         LargerTri(xa,ya);
+
+        sc.close();
     }
     public static double TriA(double a,double b,double c){
         double p =  (a + b + c) /2;
