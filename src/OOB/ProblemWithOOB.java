@@ -20,6 +20,9 @@ public class ProblemWithOOB {
         y.b = sc.nextDouble();
         y.c = sc.nextDouble();
 
+        System.out.printf("Triangle X area: %f%n",x.area());
+        System.out.printf("Triangle Y area: %f%n",y.area());
+        LargerTri(x.area(), y.area());
         sc.close();
     }
 
