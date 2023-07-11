@@ -18,8 +18,8 @@ public class Produto {
     public void returnData(){
         System.out.println("------ DATA ------");
         System.out.printf("Produto: %s%n",name);
-        System.out.printf("Preço da unidade: %.2f%n",price);
+        System.out.printf("Preço da unidade: R$ %.2f%n",price);
         System.out.printf("Quantidade em estoque: %d%n",quanty);
-        System.out.printf("Valor do estoque: %.2f%n%n",totalValueInStock());
+        System.out.printf("Valor do estoque: R$ %.2f%n%n",totalValueInStock());
     }
 }
