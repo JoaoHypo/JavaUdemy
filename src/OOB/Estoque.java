@@ -18,7 +18,7 @@ public class Estoque {
         sc.nextLine();
 
         System.out.println("Digite a quantidade do estoque:");
-        x.quanty = sc.nextInt();
+        x.quantity = sc.nextInt();
         sc.nextLine();
 
         x.returnData();
