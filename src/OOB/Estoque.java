@@ -34,5 +34,6 @@ public class Estoque {
         x.returnData();
 
         sc.close();
+        System.out.println(x.toString());
     }
 }

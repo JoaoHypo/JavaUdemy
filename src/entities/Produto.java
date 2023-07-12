@@ -22,4 +22,17 @@ public class Produto {
         System.out.printf("Quantidade em estoque: %d%n",quantity);
         System.out.printf("Valor do estoque: R$ %.2f%n%n",totalValueInStock());
     }
+    //@Override
+    public String toString(){
+
+        return "------ TOO STRING ------\nProduto: "
+            + name
+            + "\nPreço da unidade: R$ $ "
+            + String.format("%.2f", price)
+            + "\nQuantidade em estoque: "
+            + quantity
+            + "\nValor do estoque: R$ $"
+            + String.format("%.2f", totalValueInStock());
+    }
+
 }
