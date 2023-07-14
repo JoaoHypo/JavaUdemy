@@ -1,7 +1,5 @@
 package OOB;
-
 import entities.Rectangle;
-
 import java.util.Scanner;
 
 public class RectangleEx1 {
