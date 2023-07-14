@@ -25,7 +25,7 @@ public class Produto {
     //@Override
     public String toString(){
 
-        return "------ TOO STRING ------\nProduto: "
+        return "------ TOO STRING DATA ------\nProduto: "
             + name
             + "\nPreço da unidade: R$ $ "
             + String.format("%.2f", price)
