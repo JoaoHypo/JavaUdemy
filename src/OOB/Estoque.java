@@ -8,19 +8,19 @@ public class Estoque {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        Produto x = new Produto();
 
         System.out.println("Digite o nome do produto:");
-        x.name = sc.nextLine();
+        String name = sc.nextLine();
 
         System.out.println("Digite o preço da unidade:");
-        x.price = sc.nextDouble();
+        double price = sc.nextDouble();
         sc.nextLine();
 
         System.out.println("Digite a quantidade do estoque:");
-        x.quantity = sc.nextInt();
+        int quantity = sc.nextInt();
         sc.nextLine();
 
+        Produto x = new Produto(name,price,quantity);
         x.returnData();
 
         System.out.println("Digite quantos produtos vai adicionar:");
@@ -35,5 +35,8 @@ public class Estoque {
 
         sc.close();
         System.out.println(x.toString());
+
+
+
     }
 }
