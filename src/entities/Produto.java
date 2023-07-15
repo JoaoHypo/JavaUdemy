@@ -2,14 +2,14 @@ package entities;
 
 public class Produto {
 
-    public String name;
-    public double price;
-    public int quantity; //by default java starts its normal
+    private String name;
+    private double price;
+    private int quantity; //by default java starts its normal
                          // types with some pre-set default values
 
     public Produto(){ //constructor
     }
-
+    //overload
     public Produto(String name,double price,int quantity){ //constructor
         this.name = name;
         this.price = price;
@@ -19,6 +19,28 @@ public class Produto {
     public Produto(String name,double price){ //constructor
         this.name = name;
         this.price = price;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setPrice(double price){
+        this.price = price;
+    }
+//    public void setQuantity(int quantity){
+//        this.quantity = quantity;
+//    } Since we are dealing with a product stock,
+//       we need to ensure that only the ''stock''
+//       methods are able to manipulate this attribute,
+//       in this case, addProducts and removeProducts
+
+    public String getName(){
+        return name;
+    }
+    public double getPrice(){
+        return price;
+    }
+    public int getQuantity(){
+        return quantity;
     }
 
     public double totalValueInStock(){
