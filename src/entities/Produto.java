@@ -4,12 +4,21 @@ public class Produto {
 
     public String name;
     public double price;
-    public int quantity;
+    public int quantity; //by default java starts its normal
+                         // types with some pre-set default values
+
+    public Produto(){ //constructor
+    }
 
     public Produto(String name,double price,int quantity){ //constructor
         this.name = name;
         this.price = price;
         this.quantity = quantity;
+    }
+    //overload
+    public Produto(String name,double price){ //constructor
+        this.name = name;
+        this.price = price;
     }
 
     public double totalValueInStock(){
