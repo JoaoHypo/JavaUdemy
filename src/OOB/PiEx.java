@@ -15,7 +15,12 @@ public class PiEx {
         sc.nextLine();
 
         System.out.println(circ);
-        System.out.println(Pi.pi);
+        System.out.println(Pi.PI);
+
+        System.out.print("Enter second radius - not instantiated: ");
+        double circ2 = sc.nextDouble();
+        System.out.printf("Circumference: %.2f%n",Pi.circumference(circ2));
+        System.out.printf("Volume: %.2f%n",Pi.volume(circ2));
         sc.close();
     }
 }
