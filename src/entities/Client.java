@@ -3,7 +3,7 @@ package entities;
 public class Client {
 
     private final int accountNumber;
-    double balance;
+    private double balance;
     private String name;
 
     public Client (int accountNumber,String name,double balance){
