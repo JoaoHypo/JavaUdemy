@@ -1,3 +1,5 @@
+By Hypo:
+
 Construtor - Inicializador da classe que define a forma como deve ser instanciado e quais atributos devem ser passados.
 
 
@@ -22,5 +24,21 @@ Pensando em um programa de calculadora, as operações matemáticas podem ajudar
 
 
 
-Modificadores de acesso - São os termos ou também ausência de um, ao declararmos os membros das classes em java
+Modificadores de acesso - São os termos ou também ausência de um, ao declararmos os membros das classes em java que determina quais classes poderão acessar seu conteúdo, variando entre pacotes, subclasses e modulos.
 
+
+--------------------------------------------------------
+
+By gepeto:
+
+Construtor - Correto. O construtor é um método especial que inicializa os objetos de uma classe. Ele define como um objeto deve ser criado e quais atributos devem ser passados durante a instanciação.
+
+This - Correto. A palavra-chave "this" em Java é usada para referenciar o objeto atual. Pode ser usado para referenciar a própria classe (this), atributos (this.atributo) ou métodos (this.metodo).
+
+Sobrecarga - Correto. A sobrecarga de métodos ocorre quando há vários métodos com o mesmo nome em uma classe, mas com diferentes parâmetros. Os métodos sobrecarregados podem ter funcionalidades diferentes, desde que tenham assinaturas diferentes (parâmetros diferentes) para que o programa possa distinguir entre eles.
+
+Encapsulamento - Correto. O encapsulamento é um princípio da programação orientada a objetos que consiste em ocultar os detalhes internos de uma classe e fornecer métodos públicos para acessar e modificar os atributos dessa classe. Os getters e setters são métodos utilizados para acessar e modificar os atributos encapsulados, permitindo um controle sobre o acesso aos mesmos.
+
+Membros estáticos - Correto. Os membros estáticos (atributos e métodos) pertencem à classe em vez de pertencerem a instâncias individuais da classe. Eles podem ser acessados sem a necessidade de criar uma instância da classe e são compartilhados por todas as instâncias da classe. São úteis quando o valor ou a lógica do membro é independente do estado específico do objeto.
+
+Modificadores de acesso - Correto. Os modificadores de acesso em Java são palavras-chave que especificam o nível de acesso aos membros (atributos, métodos, classes) de uma classe. Os principais modificadores de acesso são: public, private, protected e o padrão (sem especificação de modificador). Eles controlam a visibilidade e a acessibilidade dos membros em relação a outras classes e pacotes.
