@@ -6,10 +6,11 @@ public class Client {
     private double balance;
     private String name;
 
-    public Client (int accountNumber,String name,double balance){
+    public Client (int accountNumber,String name,double initialBalance){
         this.accountNumber = accountNumber;
         this.name = name;
-        this.balance = balance;
+        deposit(initialBalance); //encapsulando a regra de negócio e delegando para o método correto,
+        // poupando trabalho e segurança caso hajam mudanças futuras nas regras de depósito.
     }
     public Client (int accountNumber,String name){
         this.accountNumber = accountNumber;
@@ -25,6 +26,9 @@ public class Client {
 
     public double getBalance(){
         return balance;
+    }
+    public int getAccountNumber(){
+        return accountNumber;
     }
 
     public void deposit(double deposit){

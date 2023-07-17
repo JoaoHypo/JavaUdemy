@@ -18,13 +18,14 @@ public class BankSystem {
         System.out.print("Is there an initial deposit(y/n)? ");
         String startBalance = sc.nextLine();
 
-        double firstDeposit = 0;
-        //coleta termo 0 da string para char
+        Client client; //inicializei antes, porém sem construir,
+        // para  seguir a lógica do if com construtores diferentes.
+
         if ("y".equals(startBalance)){
             System.out.print("Enter initial deposit value: ");
-            firstDeposit = sc.nextDouble();
-        }
-        Client client = new Client(accountNumber,name,firstDeposit);
+            double firstDeposit = sc.nextDouble();
+            client = new Client(accountNumber,name,firstDeposit);
+        }else {client = new Client(accountNumber,name);}
 
         System.out.printf("Account data: %n%s:%n%n",client);
 
