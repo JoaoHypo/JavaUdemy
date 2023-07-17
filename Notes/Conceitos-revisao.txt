@@ -1,0 +1,26 @@
+Construtor - Inicializador da classe que define a forma como deve ser instanciado e quais atributos devem ser passados.
+
+
+
+This - é a forma de referênciar o paraêmtro dentro da propria classe, nesse caso pode ser utilizado para referênciar a classe como um todo, atributos ou métodos.
+
+
+
+Sobrecarga - É a utilização de métodos com o mesmo nome, eles podem sobrepor o método em questão ou trabalhar em conjunto, desde que tenham mudanças em seus parâmetros estabelecidos, dessa forma com parâemtros diferentes e dentro das suas versões já definidas o programa vai identificar qual versao do método a ser utilizada.
+
+
+
+Encapsulamento - É o princípio de ocultar as partes internas de um objeto e fornecer métodos públicos para acessar e modificar essas partes de forma controlada. Isso ajuda a proteger o estado do objeto e promove um design mais robusto e seguro.
+
+Getters e Setter são os métodos que fazem parte do conceito encapsulamento, eles são os responsáveis por protegerem os atributos, sendo construídos em contexto que o programador determina a liberdade do método e resultado/return desejado.
+
+
+
+Membros estáticos - São membros que provavelmente serão utilizados por mais de uma classe, de forma que os atritubos geralmente são uteis a mais de um contexto, e os métodos possuem uma lógica replicável para as outras classes. É comum estes membros serem de classes ou pacotes utilitários, justamente por servirem de ferramenta a mais de uma situação e atuarem em conjunto com mais de 1 classe.
+
+Pensando em um programa de calculadora, as operações matemáticas podem ajudar tanto em uma calculadora de integrais, quanto em uma escalonadora de matrizes, nesse contexto o ideal seria criar o método soma como estático, podendo ser utilizado por outras classes, nesse exemplo, a calcuradora de integrais e também a classe calculadora de matrizes escalonadas.
+
+
+
+Modificadores de acesso - São os termos ou também ausência de um, ao declararmos os membros das classes em java
+
