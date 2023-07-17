@@ -2,9 +2,9 @@ package entities;
 
 public class Client {
 
-    private String name;
-    double balance;
     private final int accountNumber;
+    double balance;
+    private String name;
 
     public Client (int accountNumber,String name,double balance){
         this.accountNumber = accountNumber;
