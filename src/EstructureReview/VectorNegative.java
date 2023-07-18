@@ -16,9 +16,10 @@ public class VectorNegative {
             vect[i] = sc.nextDouble();
         }
         System.out.println("NEGATIVE NUMBERS:");
-        for (int i = 0; i< vect.length; i++){
-            if (vect[i] < 0){
-                System.out.println(vect[i]);
+        //new notation
+        for (double v : vect) {
+            if (v < 0) {
+                System.out.println(v);
             }
         }
     }
