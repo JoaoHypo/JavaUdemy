@@ -12,6 +12,7 @@ public class Vectors_Students {
         String[] vect = new String[10];
 
         for (int i = 0; i < n ; i++){
+            System.out.println();
             System.out.printf("RENT NUMBER #%d: %n",i+1);
             System.out.print("Name: ");
             String name = sc.nextLine();
