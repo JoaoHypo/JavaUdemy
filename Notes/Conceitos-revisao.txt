@@ -57,3 +57,15 @@ Encapsulamento - Correto. O encapsulamento é um princípio da programação ori
 Membros estáticos - Correto. Os membros estáticos (atributos e métodos) pertencem à classe em vez de pertencerem a instâncias individuais da classe. Eles podem ser acessados sem a necessidade de criar uma instância da classe e são compartilhados por todas as instâncias da classe. São úteis quando o valor ou a lógica do membro é independente do estado específico do objeto.
 
 Modificadores de acesso - Correto. Os modificadores de acesso em Java são palavras-chave que especificam o nível de acesso aos membros (atributos, métodos, classes) de uma classe. Os principais modificadores de acesso são: public, private, protected e o padrão (sem especificação de modificador). Eles controlam a visibilidade e a acessibilidade dos membros em relação a outras classes e pacotes.
+
+Tipos referência vs tipo valor:
+Correto. Os tipos primitivos em Java são tipos de valor e armazenam diretamente o valor dos dados, enquanto os tipos de classe (ou objetos) são tipos referência e armazenam uma referência (endereço de memória) para o objeto na heap.
+
+String pool:
+Quase correto. O String pool é uma área especial na memória da JVM onde são armazenadas as strings literais (definidas diretamente no código). Quando você cria uma string literal, ela é verificada no pool, e se já existir uma string igual lá, o novo objeto referenciará a mesma instância (reaproveitando-a) em vez de criar uma nova. No entanto, ao criar uma string usando new String("exemplo"), ela não estará no pool; será criada uma nova instância no heap, mesmo que uma string igual já exista no pool.
+
+Boxing, unboxing, wrapper:
+Quase correto. Vamos ajustar a descrição:
+Boxing: É o processo de converter um tipo primitivo em seu correspondente tipo de classe (wrapper). Por exemplo, converter um int em Integer ou um double em Double. O boxing ocorre automaticamente quando necessário, como quando você armazena um valor primitivo em uma coleção genérica.
+Unboxing: É o processo oposto ao boxing, onde se converte um objeto wrapper para o tipo primitivo correspondente. O unboxing também ocorre automaticamente quando necessário, como quando você recupera um valor de uma coleção genérica.
+Wrapper: São classes de objetos que representam os tipos primitivos em forma de objetos. Elas fornecem métodos e funcionalidades adicionais, como permitir o uso de tipos primitivos em coleções genéricas ou suportar valores nulos usando a classe wrapper (por exemplo, Integer pode ser nulo, mas int não pode).
