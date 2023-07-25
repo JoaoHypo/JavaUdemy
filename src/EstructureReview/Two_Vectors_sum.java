@@ -33,6 +33,5 @@ public class Two_Vectors_sum {
             result[i] = vect[i] + vect2[i];
             System.out.printf("%.1f%n",result[i]);
             }
-
     }
 }
