@@ -27,6 +27,21 @@ Pensando em um programa de calculadora, as operações matemáticas podem ajudar
 Modificadores de acesso - São os termos ou também ausência de um, ao declararmos os membros das classes em java que determina quais classes poderão acessar seu conteúdo, variando entre pacotes, subclasses e modulos.
 
 
+Tipos referência vs tipo valor -
+Tipos referência são tipos class, e tipos valor sãos os tipos primitivos do java.
+
+String pool -
+String pool é pra onde vão os objetos de string, dentro da memoria HEAP, e caso seja instanciado um Objeto NEW string, ele é instanciado na pool e também fora da pool, ambos na heap.
+
+Boxing, unboxing, wrapper -
+
+Boxing é converter um valor de variavel na stack e objetificar ele, instanciar na heap em uma box de memória.
+
+Unboxing é atribuir um valor de algum atributo de um objeto, que está na heap e criar sua isntância na stack, em forma de variavel de tipo primitivo, tipo referência.
+
+Wrapper é o ato de utilizar as classes referência, que são as classes dos tipos primitivos para armazenar os valores dos tipos primitivos, a principal vantagem é que por se tratar de um objeto, podemos ter atributos null.
+
+
 --------------------------------------------------------
 
 By gepeto:
