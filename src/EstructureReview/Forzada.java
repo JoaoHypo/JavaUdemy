@@ -17,6 +17,12 @@ public class Forzada {
             sum += n;
 
         }
+        for (int c1=0;c1<n1;c1++) { //for padrão
+            //cont++ ---/\
+            n = sc.nextInt();
+            sum += n;
+
+        }
         System.out.printf("A soma é %d",sum);
 
         sc.close();
