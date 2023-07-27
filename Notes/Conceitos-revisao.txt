@@ -42,6 +42,11 @@ Unboxing é atribuir um valor de algum atributo de um objeto, que está na heap 
 Wrapper é o ato de utilizar as classes referência, que são as classes dos tipos primitivos para armazenar os valores dos tipos primitivos, a principal vantagem é que por se tratar de um objeto, podemos ter atributos null.
 
 
+List - Lists são interfaces e portanto não podem ser instânciadas, logo precisam de classes complementares, que utilizam da interface List para conseguir instânciar os objetos.
+
+Listas iniciam vazias.
+
+De vantagens temos que seu valor pode variar, é dinâmico, porém isso têm 1 custo de processamento, a medida que ela for crescendo unica forma de consultar algum de seus elementos é iterando sequêncialmente.
 --------------------------------------------------------
 
 By gepeto:
