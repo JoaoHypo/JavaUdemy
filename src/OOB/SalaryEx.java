@@ -1,15 +1,14 @@
 package OOB;
 
-import entities.Employee;
+import entities.Employee2;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class SalaryEx {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        Employee E1 = new Employee();
+        Employee2 E1 = new Employee2();
 
         System.out.print("Name:");
         E1.name = sc.nextLine();
