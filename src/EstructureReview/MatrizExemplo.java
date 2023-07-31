@@ -31,4 +31,15 @@ public class MatrizExemplo {
         System.out.println("\nResultado da multiplicação por " + escalar + ":");
         imprimirMatriz(matrizEscalar);
     }
+    // Função para preencher a matriz com valores
+    public static void preencherMatriz(int[][] matriz) {
+        int valor = 1;
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                matriz[i][j] = valor;
+                valor++;
+            }
+        }
+    }
+
 }
