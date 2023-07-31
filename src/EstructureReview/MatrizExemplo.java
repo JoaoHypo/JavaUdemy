@@ -50,5 +50,19 @@ public class MatrizExemplo {
             System.out.println();
         }
     }
+    // Função para somar duas matrizes
+    public static int[][] somarMatrizes(int[][] matriz1, int[][] matriz2) {
+        int linhas = matriz1.length;
+        int colunas = matriz1[0].length;
+        int[][] resultado = new int[linhas][colunas];
+
+        for (int i = 0; i < linhas; i++) {
+            for (int j = 0; j < colunas; j++) {
+                resultado[i][j] = matriz1[i][j] + matriz2[i][j];
+            }
+        }
+
+        return resultado;
+    }
 
 }
