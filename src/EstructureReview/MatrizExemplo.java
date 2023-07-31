@@ -64,5 +64,18 @@ public class MatrizExemplo {
 
         return resultado;
     }
+    // Função para multiplicar uma matriz por um escalar
+    public static int[][] multiplicarPorEscalar(int[][] matriz, int escalar) {
+        int linhas = matriz.length;
+        int colunas = matriz[0].length;
+        int[][] resultado = new int[linhas][colunas];
 
+        for (int i = 0; i < linhas; i++) {
+            for (int j = 0; j < colunas; j++) {
+                resultado[i][j] = matriz[i][j] * escalar;
+            }
+        }
+
+        return resultado;
+    }
 }
