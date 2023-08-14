@@ -11,6 +11,7 @@ public class ListAndClass {
         Scanner sc = new Scanner(System.in);
 
         List<Employee> list = new ArrayList<>();
+        // could have Employee inside Array declaration
 
         // PART 1 - READING DATA:
 
