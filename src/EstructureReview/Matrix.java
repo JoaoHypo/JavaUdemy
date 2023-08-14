@@ -1,5 +1,7 @@
 package EstructureReview;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Matrix {
@@ -11,6 +13,8 @@ public class Matrix {
         int n = sc.nextInt();
         sc.nextLine();
 
+        List<Integer> diagonal = new ArrayList<>();
+        List<Integer> negative = new ArrayList<>();
         //Creating matrix
         int [][] matrix = new int [n][n];
 
@@ -19,6 +23,13 @@ public class Matrix {
                 System.out.printf("Type the term [%d][%d]: ",i,j);
                 matrix[i][j] = sc.nextInt();
                 sc.nextLine();
+
+                if (matrix[i][j] < 0) {
+                    negative.add(matrix[i][j]);
+                }
+                if (i == j){
+                    diagonal.add(matrix[i][j]);
+                }
             }
         }
 
@@ -29,6 +40,18 @@ public class Matrix {
             }
             System.out.print("|");
             System.out.println();
+        }
+
+        System.out.println("Diagonal: ");
+        System.out.print("[");
+        for (int num : diagonal){
+            System.out.printf(" %d",num);
+        }
+        System.out.print(" ]\n");
+
+        System.out.print("Negative Numbers: ");
+        for (int num : negative){
+            System.out.printf("%d, ",num);
         }
 
         sc.close();
