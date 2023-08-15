@@ -52,15 +52,23 @@ public class Matrix2 {
                     System.out.printf("Position: %d,%d:%n",i,j);
                     if (j-1 >= 0){
                         System.out.printf("Left: %d%n",matrix[i][j-1]);
+                    }else {
+                        System.out.println("Left: None(limit)");
                     }
                     if (j+1 <= n-1){
                         System.out.printf("Right: %d%n",matrix[i][j+1]);
+                    }else {
+                        System.out.println("Right: None(limit)");
                     }
                     if (i-1 >= 0){
                         System.out.printf("Up: %d%n",matrix[i-1][j]);
+                    }else {
+                        System.out.println("Up: None(limit)");
                     }
                     if (i+1 <= m-1){
                         System.out.printf("Down: %d%n",matrix[i+1][j]);
+                    }else {
+                        System.out.println("Down: limit");
                     }
 
                 }
