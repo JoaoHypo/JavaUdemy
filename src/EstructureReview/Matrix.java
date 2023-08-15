@@ -49,7 +49,7 @@ public class Matrix {
         }
         System.out.print(" ]\n");
 
-        System.out.print("Negative Numbers: ");
+        System.out.printf("Negative Numbers: %d%n",negative.size());
         for (int num : negative){
             System.out.printf("%d, ",num);
         }
