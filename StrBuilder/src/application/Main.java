@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        DateTimeFormatter fmt = Post.getDTF();
 
         List<Post> posts = new ArrayList<>();
 
@@ -50,16 +50,10 @@ public class Main {
             }
         }
 
+        System.out.println("\n----------------------\n");
+
         for (Post post : posts){
-            System.out.println(post.getTitle());
-            System.out.println(String.valueOf(post.getLikes()) + " Likes - " +
-                    post.getMoment().format(fmt));
-            System.out.println(post.getContent());
-            System.out.println("Comments: ");
-            for(Comment comment : post.getComments()){
-                System.out.println(comment.getComment());
-            }
-            System.out.println("----------------------");
+            System.out.println(post.toString());;
         }
         sc.close();
     }

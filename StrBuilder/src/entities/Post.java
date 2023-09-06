@@ -3,6 +3,7 @@ package entities;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.time.format.DateTimeFormatter;
 
 public class Post {
     private LocalDateTime moment;
@@ -10,6 +11,7 @@ public class Post {
     private String content;
     private Integer likes;
 
+    private static final DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
     private final List<Comment> comments = new ArrayList<>();
 
     public Post(){
@@ -66,5 +68,21 @@ public class Post {
         comments.remove(comment);
     }
 
-
+    public static DateTimeFormatter getDTF(){
+        return fmt;
+    }
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(title).append("\n");
+        sb.append(String.format("%d Likes - ", getLikes()));
+        sb.append(getMoment().format(fmt)).append("\n");
+        sb.append(getContent()).append("\n");
+        sb.append("Comments: \n");;
+        for(Comment comment : getComments()){
+            sb.append(comment.getComment()).append("\n");
+        }
+        sb.append("\n----------------------\n");
+        return sb.toString();
+    }
 }
