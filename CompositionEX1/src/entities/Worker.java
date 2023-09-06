@@ -2,6 +2,7 @@ package entities;
 
 import entities.enums.WorkerLevel;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,7 @@ public class Worker {
     private Double baseSalary;
 
     private Department department;
-    private List<HourContract> contracts = new ArrayList<HourContract>();
+    private List<HourContract>  contracts = new ArrayList<>();
 
     public Worker(){
     }
@@ -52,12 +53,22 @@ public class Worker {
         contracts.add(contract);
     }
 
-    public void removeContract(){
-        //todo: think in the logic to identify the contract to be
-        // removed since they don't have an id
+    public void removeContract(HourContract contract){
+        contracts.remove(contract);
     }
 
-    public Double income(){
-        return 2.0;
+    public Double income(LocalDate date){
+        Double total = baseSalary;
+        for(HourContract c: contracts){
+            if (c.getDate().getMonth() == date.getMonth() && c.getDate().getYear() == date.getYear()){
+                total += c.totalValue();
+            }
+        }
+        return total;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Name: %s%nLevel: %s%nDepartment: %s",name,level.name(),department.getName());
     }
 }
