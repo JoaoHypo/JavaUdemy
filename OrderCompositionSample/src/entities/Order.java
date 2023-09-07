@@ -51,7 +51,7 @@ public class Order {
         sb.append("ORDER SUMMARY:\n");
         sb.append(String.format("Order moment: %s%n",moment.format(orderFmt)));
         sb.append(String.format("Order status: %s%n",status.name()));
-        sb.append(String.format("Client: %s (%s) - %s%n",client.getName(),client.getBirthday().format(Client.getBirthDayFmt()), client.getEmail()));
+        sb.append(client.toString());
         sb.append("Order items: \n");
         for(OrderItem orderItem : items){
             sb.append(orderItem.toString()).append("\n");

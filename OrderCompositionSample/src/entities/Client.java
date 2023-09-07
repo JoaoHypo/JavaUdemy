@@ -43,4 +43,9 @@ public class Client {
     public static DateTimeFormatter getBirthDayFmt(){
         return birthDayFmt;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Client: %s (%s) - %s%n",name,birthday.format(birthDayFmt),email);
+    }
 }
