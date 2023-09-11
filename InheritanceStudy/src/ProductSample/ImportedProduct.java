@@ -22,7 +22,7 @@ public final class ImportedProduct extends Product{
 
     @Override
     public String toString(){
-        return String.format("%s $ %.2f (Customs fee: $ %.2f%n)",name,totalPrice(),customsFee);
+        return String.format("%s $ %.2f (Customs fee: $ %.2f)%n",name,totalPrice(),customsFee);
     }
 
 }

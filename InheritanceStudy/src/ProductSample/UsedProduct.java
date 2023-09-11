@@ -4,8 +4,10 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public final class UsedProduct extends Product{
-    private static final DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
     private LocalDate manufactureDate;
+
+    private static final DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     public UsedProduct(String name, Double price, LocalDate manufactureDate) {
         super(name, price);
@@ -26,6 +28,6 @@ public final class UsedProduct extends Product{
 
     @Override
     public String toString() {
-        return String.format("%s (used)$ %.2f (Manufacture date: %s%n)",name,price,getManufactureDate().format(fmt));
+        return String.format("%s (used) $ %.2f (Manufacture date: %s)%n",name,price,getManufactureDate().format(fmt));
     }
 }
