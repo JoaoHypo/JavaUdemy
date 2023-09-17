@@ -5,6 +5,21 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+        method1();
+        System.out.println("End of the Program");
+
+    }
+
+    public static void method1() {
+        System.out.println("*** METHOD 1 START ***");
+        method2();
+        System.out.println("*** METHOD 1 END ***");
+    }
+
+    public static void method2() {
+        System.out.println("*** METHOD 2 START ***");
+
         Scanner sc = new Scanner(System.in);
 
         try {
@@ -13,13 +28,15 @@ public class Main {
             System.out.println(vect[position]);
         }
         catch (ArrayIndexOutOfBoundsException e){
-            System.out.println("Invalid position");
+            System.out.println("Invalid position!");
+            e.printStackTrace(); // shows the path within the calls for the method
+            sc.next();
         }
         catch (InputMismatchException e){
             System.out.println("Invalid position input");
         }
 
-        System.out.println("End of the Program");
+        System.out.println("*** METHOD 2 END ***");
 
         sc.close();
     }
