@@ -24,7 +24,8 @@ public class Program {
 
         System.out.print("Type checkout date (DD/MM/YYYY): ");
         LocalDateTime checkout = LocalDate.parse(sc.nextLine(),fmt).atStartOfDay();
-
+        //since validation should return string and constructor does not have a
+        // return by its essence, for bad approach, we'll maintain this
         if (!checkout.isAfter(checkin)){
             System.out.println("Error in reservation: Check-out date must be after check-in date!");
         }
@@ -42,16 +43,11 @@ public class Program {
             System.out.print("Type checkout date (DD/MM/YYYY): ");
             checkout = LocalDate.parse(sc.nextLine(),fmt).atStartOfDay();
 
-            LocalDateTime now = LocalDateTime.now();
-            if (checkin.isBefore(now) || checkout.isBefore(now)){
-                System.out.println("Error in reservation: Reservation dates for update must be future dates!");
-            }
-            else if (!checkout.isAfter(checkin)){
-                System.out.println("Error in reservation: Check-out date must be after check-in date!");
+            String error = reserva.updateDates(checkin,checkout);
+            if (error != null){
+                System.out.println("Error in reservation: " + error);
             }
             else {
-                reserva.updateDates(checkin,checkout);
-                System.out.println("Reservation update concluded!");
                 System.out.println(reserva.toString());
             }
         }
