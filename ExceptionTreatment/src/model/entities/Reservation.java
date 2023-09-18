@@ -1,10 +1,8 @@
-package Reservations;
+package model.entities;
 
 import java.time.Duration;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 public class Reservation {
 
@@ -59,6 +57,6 @@ public class Reservation {
                 "\nRoom Number = " + roomNumber +
                 "\nCheckin date = " + checkin.format(dtf) +
                 "\nCheckout date = " + checkout.format(dtf) +
-                "\nDuration = " + duration();
+                "\nNights = " + duration();
     }
 }
