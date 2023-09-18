@@ -19,17 +19,28 @@ public class Account {
         return balance;
     }
 
+    public double getWithdrawLimit(){
+        return withdrawLimit;
+    }
+
     public void deposit(double amount){
         balance += amount;
      }
 
-     public void withdraw(double amount) throws DomainException{
-         if (amount > withdrawLimit) {
-             throw new DomainException("Withdraw not allowed, withdraw limit exceed");
-         }
-        if (amount > balance) {
+    public void withdraw(double amount) throws DomainException{
+        validateWithdraw(amount);
+        balance-= amount;
+    }
+
+    private void validateWithdraw(double amount) throws DomainException{
+        if (amount > getWithdrawLimit()) {
+            throw new DomainException("Withdraw not allowed, withdraw limit exceed");
+        }
+        if (amount > getBalance()) {
             throw new DomainException("Withdraw not allowed, balance limit exceed");
         }
-        balance-= amount;
-     }
+    }
+
+
+
 }

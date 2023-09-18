@@ -22,7 +22,7 @@ public class Program {
 
             Account account = new Account(number,holder,balance,withdrawLimit);
 
-            System.out.print("Enter ammount to withdraw: ");
+            System.out.print("Enter amount to withdraw: ");
             account.withdraw(sc.nextDouble());
             sc.nextLine();
 
