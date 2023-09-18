@@ -1,42 +1,32 @@
 package model.entities;
 
+import model.exceptions.DomainException;
+
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Reservation {
 
-    private int roomNumber;
+    private final int roomNumber;
     private LocalDateTime checkin;
     private LocalDateTime checkout;
 
     public final static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-    public Reservation(int roomNumber, LocalDateTime checkin, LocalDateTime checkout) {
+    public Reservation(int roomNumber, LocalDateTime checkin, LocalDateTime checkout){
+        if (!checkout.isAfter(checkin)){
+            throw new DomainException("Check-out date must be after check-in date!");
+        } //defensive programming , error check first
         this.roomNumber = roomNumber;
         this.checkin = checkin;
         this.checkout = checkout;
-    }
-
-    public int getRoomNumber() {
-        return roomNumber;
-    }
-
-    public void setRoomNumber(int roomNumber) {
-        this.roomNumber = roomNumber;
-    }
-
-    public LocalDateTime getCheckin() {
-        return checkin;
     }
 
     public void setCheckin(LocalDateTime checkin) {
         this.checkin = checkin;
     }
 
-    public LocalDateTime getCheckout() {
-        return checkout;
-    }
 
     public void setCheckout(LocalDateTime checkout) {
         this.checkout = checkout;
@@ -46,17 +36,16 @@ public class Reservation {
         return (int) Duration.between(checkin, checkout).toDays();
     }
 
-    public String updateDates(LocalDateTime checkin, LocalDateTime checkout){
+    public void updateDates(LocalDateTime checkin, LocalDateTime checkout){
         LocalDateTime now = LocalDateTime.now();
         if (checkin.isBefore(now) || checkout.isBefore(now)){
-            return "Reservation dates for update must be future dates!";
+            throw new DomainException("Reservation dates for update must be future dates!");
         }
         if (!checkout.isAfter(checkin)){
-            return "Check-out date must be after check-in date!";
+            throw new DomainException("Check-out date must be after check-in date!");
         }
         setCheckin(checkin);
         setCheckout(checkout);
-        return null;
     }
 
     @Override
