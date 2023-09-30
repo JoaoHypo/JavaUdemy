@@ -3,6 +3,7 @@ package noInterface.application;
 import noInterface.entitites.CarRental;
 import noInterface.entitites.Invoice;
 import noInterface.entitites.Vehicle;
+import noInterface.services.BrazilTaxService;
 import noInterface.services.RentalService;
 
 import java.time.Duration;
@@ -35,7 +36,7 @@ public class Program {
         double pricePerDay = sc.nextDouble();
         sc.nextLine();
 
-        RentalService rentalService = new RentalService(pricePerHour,pricePerDay);
+        RentalService rentalService = new RentalService(pricePerHour,pricePerDay,new BrazilTaxService());
         rentalService.processInvoice(carRental);
 
         System.out.println(carRental.getInvoice());
