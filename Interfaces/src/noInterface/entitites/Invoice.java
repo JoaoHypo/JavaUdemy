@@ -3,7 +3,7 @@ package noInterface.entitites;
 public class Invoice {
     private Double basicPayment;
     private Double tax;
-    private Double totalPayment;
+    private final Double totalPayment;
 
     public Invoice(Double basicPayment, Double tax) {
         this.basicPayment = basicPayment;
@@ -31,9 +31,6 @@ public class Invoice {
         return totalPayment;
     }
 
-    public void setTotalPayment(Double totalPayment) {
-        this.totalPayment = totalPayment;
-    }
 
     @Override
     public String toString() {

@@ -1,15 +1,16 @@
-package noInterface;
+package noInterface.application;
 
 import noInterface.entitites.CarRental;
 import noInterface.entitites.Invoice;
 import noInterface.entitites.Vehicle;
+import noInterface.services.RentalService;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class CarRentalMain {
+public class Program {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
@@ -19,7 +20,7 @@ public class CarRentalMain {
         System.out.print("Car model: ");
         Vehicle vehicle = new Vehicle(sc.nextLine());
 
-        System.out.print("Checkin date (DD/MM/YYYY HH:mm): ");
+        System.out.print("Check-in date (DD/MM/YYYY HH:mm): ");
         LocalDateTime start = LocalDateTime.parse(sc.nextLine(),dtf);
 
         System.out.print("Checkout date (DD/MM/YYYY HH:mm): ");
@@ -27,34 +28,15 @@ public class CarRentalMain {
 
         CarRental carRental = new CarRental(start,finish,vehicle);
 
-        Duration duration = Duration.between(carRental.getStart(), carRental.getFinish());
-
         System.out.print("Enter price per hour: ");
-        double priceHour = sc.nextDouble();
+        double pricePerHour = sc.nextDouble();
         sc.nextLine();
         System.out.print("Enter price per day: ");
-        double priceDay = sc.nextDouble();
+        double pricePerDay = sc.nextDouble();
         sc.nextLine();
 
-        double basicPayment;
-
-        if (duration.toHours() > 12){
-            if(duration.toHours()%24 != 0){
-                basicPayment = ((double) duration.toDaysPart() + 1.0) * priceDay ;
-            }
-            else{
-                basicPayment = ((double) duration.toDaysPart()) * priceDay ;
-            }
-        }
-        else{
-            basicPayment = duration.toHours() * priceHour;
-        }
-
-        Double tax = basicPayment > 100.0 ? basicPayment * 0.15 : basicPayment * 0.2 ;
-
-        Invoice invoice = new Invoice(basicPayment,tax);
-
-        carRental.setInvoice(invoice);
+        RentalService rentalService = new RentalService(pricePerHour,pricePerDay);
+        rentalService.processInvoice(carRental);
 
         System.out.println(carRental.getInvoice());
 
