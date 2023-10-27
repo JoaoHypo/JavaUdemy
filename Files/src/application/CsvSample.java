@@ -46,7 +46,7 @@ public class CsvSample {
                     else {
                         bw.write(data[1]);
                     }
-                    bw.newLine();
+                    bw.newLine(); //enter
                     line = br.readLine();
                 }
             } catch (IOException e) {
