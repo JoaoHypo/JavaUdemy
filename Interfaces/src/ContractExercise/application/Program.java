@@ -1,6 +1,7 @@
 package ContractExercise.application;
 
 import ContractExercise.entities.Contract;
+import ContractExercise.entities.Installment;
 import ContractExercise.services.ContractService;
 import ContractExercise.services.PaypalService;
 
@@ -29,6 +30,11 @@ public class Program {
         ContractService contractService = new ContractService(new PaypalService());
 
         contractService.processContract(contract, months);
+
+        System.out.println("Installments:");
+        for (Installment installment : contract.getInstallments()) {
+            System.out.println(installment);
+        }
 
         sc.close();
     }
