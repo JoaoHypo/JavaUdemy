@@ -1,15 +1,14 @@
 package ContractExercise.services;
 
 public class PaypalService implements OnlinePaymentService{
+    private static final double FEE_PERCENTAGE = 0.02;
+    private static final double MONTHLY_INTEREST = 0.01;
     @Override
     public double paymentFee(double amount) {
-        //2% fee/tax
-        return amount*1.02;
+        return amount * FEE_PERCENTAGE;
     }
-
     @Override
     public double interest(double amount, int months) {
-        //1% interest
-        return amount * (((double) months/100.0 ) + 1) ;
+        return amount * MONTHLY_INTEREST * months;
     }
 }

@@ -1,9 +1,36 @@
 package ContractExercise.entities;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Installment {
-    private Date dueDate;
+    private LocalDate dueDate;
     private double amount;
 
+    public Installment(){};
+
+    public Installment(LocalDate dueDate, double amount) {
+        this.dueDate = dueDate;
+        this.amount = amount;
+    }
+
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return dueDate.format(Contract.dtf) + " - " + String.format("%.2f", amount);
+    }
 }
