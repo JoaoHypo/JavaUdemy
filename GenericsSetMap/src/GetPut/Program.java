@@ -30,7 +30,7 @@ public class Program {
     public static void printList(List<?> list) {
         for (int i = 0 ; i < list.size();i++) {
             //Integer o = list.get(i); error
-            // Number o = list.get(i); error
+            //Number o = list.get(i); error
             Object o = list.get(i);
             System.out.println(o);
         }
