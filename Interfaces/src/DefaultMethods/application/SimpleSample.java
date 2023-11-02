@@ -17,7 +17,7 @@ public class SimpleSample {
         int months = sc.nextInt();
         sc.nextLine();
 
-        InterestService is = new UsaInterestService(1.0);
+        InterestService is = new BrazilInterestService(1.0);
         double payment = is.payment(amount,months);
 
         System.out.println("Payment after " + months + " months");
