@@ -1,6 +1,7 @@
 package DefaultMethods.application;
 
 import DefaultMethods.services.BrazilInterestService;
+import DefaultMethods.services.InterestService;
 import DefaultMethods.services.UsaInterestService;
 
 import java.util.Scanner;
@@ -16,7 +17,7 @@ public class SimpleSample {
         int months = sc.nextInt();
         sc.nextLine();
 
-        UsaInterestService is = new UsaInterestService(1.0);
+        InterestService is = new UsaInterestService(1.0);
         double payment = is.payment(amount,months);
 
         System.out.println("Payment after " + months + " months");
