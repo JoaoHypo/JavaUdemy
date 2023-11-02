@@ -1,4 +1,4 @@
-package RestrictedGenerics;
+package GetPut;
 
 import java.util.ArrayList;
 import java.util.List;
