@@ -2,10 +2,10 @@ package DefaultMethods.services;
 
 import java.security.InvalidParameterException;
 
-public class BrazilInterestService{
+public class UsaInterestService {
     private Double interestRate;
 
-    public BrazilInterestService(Double interestRate) {
+    public UsaInterestService(Double interestRate) {
         this.interestRate = interestRate;
     }
 
