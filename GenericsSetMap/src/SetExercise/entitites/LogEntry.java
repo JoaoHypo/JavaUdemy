@@ -1,16 +1,17 @@
 package SetExercise.entitites;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-public class User implements Comparable<User>{
+public class LogEntry implements Comparable<LogEntry>{
     private String username;
-    private Instant loginTime;
+    private List<Instant> loginTime = new ArrayList<>();
 
-    public User(String username, Instant loginTime) {
+    public LogEntry(String username, Instant loginTime) {
         this.username = username;
-        this.loginTime = loginTime;
+        this.loginTime.add(loginTime);
     }
 
     public String getUsername() {
@@ -21,20 +22,20 @@ public class User implements Comparable<User>{
         this.username = username;
     }
 
-    public Instant getLoginTime() {
+    public List<Instant> getLoginTime() {
         return loginTime;
     }
 
-    public void setLoginTime(Instant loginTime) {
-        this.loginTime = loginTime;
+    public void addLoginTime(Instant loginTime) {
+        this.loginTime.add(loginTime);
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return Objects.equals(getUsername(), user.getUsername());
+        LogEntry logEntry = (LogEntry) o;
+        return Objects.equals(getUsername(), logEntry.getUsername());
     }
 
     @Override
@@ -43,7 +44,13 @@ public class User implements Comparable<User>{
     }
 
     @Override
-    public int compareTo(User o) {
+    public int compareTo(LogEntry o) {
         return getUsername().toUpperCase().compareTo(o.getUsername().toUpperCase());
+    }
+
+    @Override
+    public String toString() {
+        return "Username='" + username + '\n' +
+                "LoginTimes=" + loginTime;
     }
 }
