@@ -1,4 +1,4 @@
-package SetExercise2;
+package SetExercise2.application;
 
 import SetExercise2.entities.Course;
 
