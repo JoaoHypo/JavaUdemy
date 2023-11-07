@@ -14,5 +14,7 @@ public class Demo2 {
         stock.put(p3, 15000.0);
         Product ps = new Product("Tv", 900.0);
         System.out.println("Contains 'ps' key: " + stock.containsKey(ps));
+        //false since without equals and hashcode implementation,
+        // the comparison is done by memory pointer
     }
 }
