@@ -1,4 +1,4 @@
-package application;
+package Streams1.application;
 
 import java.util.Arrays;
 import java.util.List;
