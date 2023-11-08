@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import model.entities.Product;
-import model.services.ProductService;
+import Lambda5.model.entities.Product;
+import Lambda5.model.services.ProductService;
 
 public class Program {
 	
